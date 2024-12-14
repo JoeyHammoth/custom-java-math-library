@@ -1,9 +1,9 @@
-package arithmetic;
+package arithmetic.basic;
 
 import java.util.List;
 
 /**
- * arithmetic.Multiplication class contains methods to multiply two numbers, an array of numbers and a list of numbers.
+ * arithmetic.basic.Multiplication class contains methods to multiply two numbers, an array of numbers and a list of numbers.
  */
 public class Multiplication {
     /**

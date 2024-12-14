@@ -1,9 +1,9 @@
-package arithmetic;
+package arithmetic.basic;
 
 import java.util.List;
 
 /**
- * arithmetic.Addition class contains methods to add two numbers, an array of numbers and a list of numbers.
+ * arithmetic.basic.Addition class contains methods to add two numbers, an array of numbers and a list of numbers.
  */
 public class Addition {
     /**

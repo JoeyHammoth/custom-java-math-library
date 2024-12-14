@@ -1,9 +1,9 @@
-package arithmetic;
+package arithmetic.basic;
 
 import java.util.List;
 
 /**
- * arithmetic.Division class contains methods to divide two numbers, an array of numbers and a list of numbers.
+ * arithmetic.basic.Division class contains methods to divide two numbers, an array of numbers and a list of numbers.
  */
 public class Division {
     /**
@@ -16,7 +16,7 @@ public class Division {
         try {
             return num1 / num2;
         } catch (ArithmeticException e) {
-            System.out.println("arithmetic.Division by zero is not allowed.");
+            System.out.println("arithmetic.basic.Division by zero is not allowed.");
             return 0;
         }
     }
@@ -31,7 +31,7 @@ public class Division {
             try {
                 result /= arr[i];
             } catch (ArithmeticException e) {
-                System.out.println("arithmetic.Division by zero is not allowed.");
+                System.out.println("arithmetic.basic.Division by zero is not allowed.");
                 return 0;
             }
         }
@@ -48,7 +48,7 @@ public class Division {
             try {
                 result /= list.get(i);
             } catch (ArithmeticException e) {
-                System.out.println("arithmetic.Division by zero is not allowed.");
+                System.out.println("arithmetic.basic.Division by zero is not allowed.");
                 return 0;
             }
         }

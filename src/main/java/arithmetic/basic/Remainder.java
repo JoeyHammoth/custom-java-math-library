@@ -1,7 +1,7 @@
-package arithmetic;
+package arithmetic.basic;
 
 /**
- * arithmetic.Remainder class contains a method to find the remainder of two numbers.
+ * arithmetic.basic.Remainder class contains a method to find the remainder of two numbers.
  */
 public class Remainder {
     /**
@@ -14,7 +14,7 @@ public class Remainder {
         try {
             return num1 % num2;
         } catch (ArithmeticException e) {
-            System.out.println("arithmetic.Remainder by zero is not allowed.");
+            System.out.println("arithmetic.basic.Remainder by zero is not allowed.");
             return 0;
         }
     }

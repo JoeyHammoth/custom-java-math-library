@@ -1,9 +1,9 @@
-package arithmetic;
+package arithmetic.basic;
 
 import java.util.List;
 
 /**
- * arithmetic.Subtraction class contains methods to subtract two numbers, an array of numbers and a list of numbers.
+ * arithmetic.basic.Subtraction class contains methods to subtract two numbers, an array of numbers and a list of numbers.
  */
 public class Subtraction {
     /**

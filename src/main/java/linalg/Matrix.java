@@ -88,4 +88,18 @@ public class Matrix {
     public void setMatrixListElement(int i, int j, float value) {
         matrixList.get(i).set(j, value);
     }
+    /**
+     * Gets the number of rows in the matrix.
+     * @return number of rows in the matrix
+     */
+    public int getMatrixRows() {
+        return matrix.length;
+    }
+    /**
+     * Gets the number of columns in the matrix.
+     * @return number of columns in the matrix
+     */
+    public int getMatrixColumns() {
+        return matrix[0].length;
+    }
 }

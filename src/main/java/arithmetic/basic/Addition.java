@@ -12,7 +12,7 @@ public class Addition {
      * @param num2 second number
      * @return sum of two numbers
      */
-    public float add(float num1, float num2) {
+    public static float add(float num1, float num2) {
         return num1 + num2;
     }
     /**
@@ -20,7 +20,7 @@ public class Addition {
      * @param arr array of numbers
      * @return sum of numbers in the array
      */
-    public float add(float[] arr) {
+    public static float add(float[] arr) {
         float result = 0;
         for (float i : arr) {
             result += i;
@@ -32,7 +32,7 @@ public class Addition {
      * @param list list of numbers
      * @return sum of numbers in the list
      */
-    public float add(List<Float> list) {
+    public static float add(List<Float> list) {
         float result = 0;
         for (float i : list) {
             result += i;

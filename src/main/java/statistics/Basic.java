@@ -9,7 +9,7 @@ public class Basic {
      * @param data the data array
      * @return the maximum value
      */
-    public float max(float[] data) {
+    public static float max(float[] data) {
         float max = data[0];
         for (float d : data) {
             if (d > max) {
@@ -23,7 +23,7 @@ public class Basic {
      * @param data the data array
      * @return the minimum value
      */
-    public float min(float[] data) {
+    public static float min(float[] data) {
         float min = data[0];
         for (float d : data) {
             if (d < min) {
@@ -37,7 +37,7 @@ public class Basic {
      * @param data the data array
      * @return the sum of the values
      */
-    public float sum(float[] data) {
+    public static float sum(float[] data) {
         float sum = 0;
         for (float d : data) {
             sum += d;
@@ -49,7 +49,7 @@ public class Basic {
      * @param data the data array
      * @return the mean of the values
      */
-    public float mean(float[] data) {
+    public static float mean(float[] data) {
         float sum = 0;
         for (float d : data) {
             sum += d;
@@ -61,7 +61,7 @@ public class Basic {
      * @param data the data array
      * @return the median of the values
      */
-    public float median(float[] data) {
+    public static float median(float[] data) {
         int n = data.length;
         if (n % 2 == 0) {
             return (data[n / 2 - 1] + data[n / 2]) / 2;
@@ -74,7 +74,7 @@ public class Basic {
      * @param data the data array
      * @return the mode of the values
      */
-    public float mode(float[] data) {
+    public static float mode(float[] data) {
         int n = data.length;
         float mode = data[0];
         int maxCount = 0;
@@ -98,7 +98,7 @@ public class Basic {
      * @param data the data array
      * @return the variance of the values
      */
-    public float variance(float[] data) {
+    public static float variance(float[] data) {
         float mean = mean(data);
         float sum = 0;
         for (float d : data) {
@@ -111,7 +111,7 @@ public class Basic {
      * @param data the data array
      * @return the standard deviation of the values
      */
-    public float standardDeviation(float[] data) {
+    public static float standardDeviation(float[] data) {
         return (float) Math.sqrt(variance(data));
     }
     /**
@@ -120,7 +120,7 @@ public class Basic {
      * @param data2 the second data array
      * @return the covariance of the values
      */
-    public float covariance(float[] data1, float[] data2) {
+    public static float covariance(float[] data1, float[] data2) {
         if (data1.length != data2.length) {
             throw new IllegalArgumentException("Data arrays must have the same length");
         }
@@ -138,7 +138,7 @@ public class Basic {
      * @param data2 the second data array
      * @return the correlation of the values
      */
-    public float correlation(float[] data1, float[] data2) {
+    public static float correlation(float[] data1, float[] data2) {
         return covariance(data1, data2) / (standardDeviation(data1) * standardDeviation(data2));
     }
 }

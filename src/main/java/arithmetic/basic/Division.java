@@ -12,7 +12,7 @@ public class Division {
      * @param num2 second number
      * @return quotient of two numbers
      */
-    public float divide(float num1, float num2) {
+    public static float divide(float num1, float num2) {
         try {
             return num1 / num2;
         } catch (ArithmeticException e) {
@@ -25,7 +25,7 @@ public class Division {
      * @param arr array of numbers
      * @return quotient of numbers in the array
      */
-    public float divide(float[] arr) {
+    public static float divide(float[] arr) {
         float result = arr[0];
         for (int i = 1; i < arr.length; i++) {
             try {
@@ -42,7 +42,7 @@ public class Division {
      * @param list list of numbers
      * @return quotient of numbers in the list
      */
-    public float divide(List<Float> list) {
+    public static float divide(List<Float> list) {
         float result = list.get(0);
         for (int i = 1; i < list.size(); i++) {
             try {

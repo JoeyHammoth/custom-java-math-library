@@ -11,7 +11,7 @@ public class Factorial {
      * @param n the number.
      * @return the factorial of the number.
      */
-    public int factorial(int n) {
+    public static int factorial(int n) {
         if (n == 0) {
             return 1;
         }
@@ -22,7 +22,7 @@ public class Factorial {
      * @param arr the array of numbers.
      * @return the sum of the factorials of the numbers.
      */
-    public int factorialSum(int[] arr) {
+    public static int factorialSum(int[] arr) {
         int result = 0;
         for (int i : arr) {
             result += factorial(i);

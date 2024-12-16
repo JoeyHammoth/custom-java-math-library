@@ -12,7 +12,7 @@ public class Exponent {
      * @param power the power number.
      * @return the exponent of the number.
      */
-    public float exponent(float base, float power) {
+    public static float exponent(float base, float power) {
         return (float) Math.pow(base, power);
     }
     /**
@@ -20,7 +20,7 @@ public class Exponent {
      * @param arr the array of numbers.
      * @return the exponent of the numbers.
      */
-    public float exponent(float[] arr) {
+    public static float exponent(float[] arr) {
         float result = 1;
         for (float i : arr) {
             result *= i;
@@ -32,7 +32,7 @@ public class Exponent {
      * @param list the list of numbers.
      * @return the exponent of the numbers.
      */
-    public float exponent(List<Float> list) {
+    public static float exponent(List<Float> list) {
         float result = 1;
         for (float i : list) {
             result *= i;

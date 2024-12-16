@@ -12,7 +12,7 @@ public class Multiplication {
      * @param num2 second number
      * @return product of two numbers
      */
-    public float multiply(float num1, float num2) {
+    public static float multiply(float num1, float num2) {
         return num1 * num2;
     }
     /**
@@ -20,7 +20,7 @@ public class Multiplication {
      * @param arr array of numbers
      * @return product of numbers in the array
      */
-    public float multiply(float[] arr) {
+    public static float multiply(float[] arr) {
         float result = arr[0];
         for (int i = 1; i < arr.length; i++) {
             result *= arr[i];
@@ -32,7 +32,7 @@ public class Multiplication {
      * @param list list of numbers
      * @return product of numbers in the list
      */
-    public float multiply(List<Float> list) {
+    public static float multiply(List<Float> list) {
         float result = list.get(0);
         for (int i = 1; i < list.size(); i++) {
             result *= list.get(i);

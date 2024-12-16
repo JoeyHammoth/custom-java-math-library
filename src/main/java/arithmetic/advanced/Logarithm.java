@@ -10,7 +10,7 @@ public class Logarithm {
      * @param number is the number to calculate the logarithm of.
      * @return the logarithm of the number to the given base.
      */
-    public float log(float base, float number) {
+    public static float log(float base, float number) {
         try {
             return ln(number) / ln(base);
         } catch (ArithmeticException e) {
@@ -22,7 +22,7 @@ public class Logarithm {
      * @param number is the number to calculate the natural logarithm of.
      * @return the natural logarithm of the number.
      */
-    public float ln(float number) {
+    public static float ln(float number) {
         try {
             return (float) Math.log(number);
         } catch (ArithmeticException e) {
@@ -34,7 +34,7 @@ public class Logarithm {
      * @param number is the number to calculate the base 10 logarithm of.
      * @return the base 10 logarithm of the number.
      */
-    public float log10(float number) {
+    public static float log10(float number) {
         try {
             return (float) Math.log10(number);
         } catch (ArithmeticException e) {
@@ -46,7 +46,7 @@ public class Logarithm {
      * @param number is the number to calculate the base 2 logarithm of.
      * @return the base 2 logarithm of the number.
      */
-    public float log2(float number) {
+    public static float log2(float number) {
         try {
             return (float) (Math.log(number) / Math.log(2));
         } catch (ArithmeticException e) {

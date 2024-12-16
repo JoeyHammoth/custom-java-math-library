@@ -12,7 +12,7 @@ public class Subtraction {
      * @param num2 second number
      * @return difference of two numbers
      */
-    public float subtract(float num1, float num2) {
+    public static float subtract(float num1, float num2) {
         return num1 - num2;
     }
     /**
@@ -20,7 +20,7 @@ public class Subtraction {
      * @param arr array of numbers
      * @return difference of numbers in the array
      */
-    public float subtract(float[] arr) {
+    public static float subtract(float[] arr) {
         float result = arr[0];
         for (int i = 1; i < arr.length; i++) {
             result -= arr[i];
@@ -32,7 +32,7 @@ public class Subtraction {
      * @param list list of numbers
      * @return difference of numbers in the list
      */
-    public float subtract(List<Float> list) {
+    public static float subtract(List<Float> list) {
         float result = list.get(0);
         for (int i = 1; i < list.size(); i++) {
             result -= list.get(i);

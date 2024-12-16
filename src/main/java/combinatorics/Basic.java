@@ -13,7 +13,7 @@ public class Basic {
      * @param r is the number of items to choose.
      * @return the permutation of n and r.
      */
-    public int permutation(int n, int r) {
+    public static float permutation(int n, int r) {
         Factorial factorial = new Factorial();
         int numerator = factorial.factorial(n);
         int denominator = factorial.factorial(n - r);
@@ -25,7 +25,7 @@ public class Basic {
      * @param r is the number of items to choose.
      * @return the combination of n and r.
      */
-    public int combination(int n, int r) {
+    public static float combination(int n, int r) {
         Factorial factorial = new Factorial();
         int numerator = factorial.factorial(n);
         int denominator = factorial.factorial(r) * factorial.factorial(n - r);

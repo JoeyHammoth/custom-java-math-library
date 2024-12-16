@@ -4,16 +4,15 @@ package statistics;
  * Regression analysis functions.
  */
 public class Regression {
-    Basic basic = new Basic();
     /**
      * Returns the slope of the regression line for the data points.
      * @param x the x values
      * @param y the y values
      * @return the slope of the regression line
      */
-    public float slope(float[] x, float[] y) {
-        float xMean = basic.mean(x);
-        float yMean = basic.mean(y);
+    public static float slope(float[] x, float[] y) {
+        float xMean = Basic.mean(x);
+        float yMean = Basic.mean(y);
         float numerator = 0;
         float denominator = 0;
         for (int i = 0; i < x.length; i++) {
@@ -28,8 +27,8 @@ public class Regression {
      * @param y the y values
      * @return the y-intercept of the regression line
      */
-    public float intercept(float[] x, float[] y) {
-        return basic.mean(y) - slope(x, y) * basic.mean(x);
+    public static float intercept(float[] x, float[] y) {
+        return Basic.mean(y) - slope(x, y) * Basic.mean(x);
     }
     /**
      * Returns the correlation coefficient of the data points.
@@ -37,9 +36,9 @@ public class Regression {
      * @param y the y values
      * @return the correlation coefficient
      */
-    public float correlation(float[] x, float[] y) {
-        float xMean = basic.mean(x);
-        float yMean = basic.mean(y);
+    public static float correlation(float[] x, float[] y) {
+        float xMean = Basic.mean(x);
+        float yMean = Basic.mean(y);
         float numerator = 0;
         float denominatorX = 0;
         float denominatorY = 0;
@@ -56,7 +55,7 @@ public class Regression {
      * @param y the y values
      * @return the coefficient of determination
      */
-    public float determination(float[] x, float[] y) {
+    public static float determination(float[] x, float[] y) {
         return correlation(x, y) * correlation(x, y);
     }
     /**
@@ -65,7 +64,7 @@ public class Regression {
      * @param y the y values
      * @return the residuals
      */
-    public float[] leastSquares(float[] x, float[] y) {
+    public static float[] leastSquares(float[] x, float[] y) {
         float[] result = new float[2];
         result[0] = slope(x, y);
         result[1] = intercept(x, y);
@@ -78,7 +77,7 @@ public class Regression {
      * @param z the z values
      * @return the residuals
      */
-    public float[] leastSquares(float[] x, float[] y, float[] z) {
+    public static float[] leastSquares(float[] x, float[] y, float[] z) {
         float[] result = new float[3];
         float[] yPrime = new float[y.length];
         for (int i = 0; i < y.length; i++) {
@@ -87,7 +86,7 @@ public class Regression {
         float[] b = leastSquares(x, yPrime);
         result[0] = b[0];
         result[1] = b[1];
-        result[2] = basic.mean(z);
+        result[2] = Basic.mean(z);
         return result;
     }
 
@@ -98,7 +97,7 @@ public class Regression {
      * @param z
      * @return
      */
-    public float[] linearRegression(float[] x, float[] y, float[] z) {
+    public static float[] linearRegression(float[] x, float[] y, float[] z) {
         float[] result = new float[3];
         float[] yPrime = new float[y.length];
         for (int i = 0; i < y.length; i++) {
@@ -107,7 +106,7 @@ public class Regression {
         float[] b = leastSquares(x, yPrime);
         result[0] = b[0];
         result[1] = b[1];
-        result[2] = basic.mean(z);
+        result[2] = Basic.mean(z);
         return result;
     }
     /**
@@ -117,7 +116,7 @@ public class Regression {
      * @param z
      * @return
      */
-    public float[] multipleRegression(float[] x, float[] y, float[] z) {
+    public static float[] multipleRegression(float[] x, float[] y, float[] z) {
         return linearRegression(x, y, z);
     }
     /**
@@ -128,7 +127,7 @@ public class Regression {
      * @param w
      * @return
      */
-    public float[] multipleRegression(float[] x, float[] y, float[] z, float[] w) {
+    public static float[] multipleRegression(float[] x, float[] y, float[] z, float[] w) {
         float[] result = new float[4];
         float[] yPrime = new float[y.length];
         for (int i = 0; i < y.length; i++) {
@@ -137,8 +136,8 @@ public class Regression {
         float[] b = leastSquares(x, yPrime);
         result[0] = b[0];
         result[1] = b[1];
-        result[2] = basic.mean(z);
-        result[3] = basic.mean(w);
+        result[2] = Basic.mean(z);
+        result[3] = Basic.mean(w);
         return result;
     }
     /**
@@ -150,7 +149,7 @@ public class Regression {
      * @param v
      * @return
      */
-    public float[] multipleRegression(float[] x, float[] y, float[] z, float[] w, float[] v) {
+    public static float[] multipleRegression(float[] x, float[] y, float[] z, float[] w, float[] v) {
         float[] result = new float[5];
         float[] yPrime = new float[y.length];
         for (int i = 0; i < y.length; i++) {
@@ -159,9 +158,9 @@ public class Regression {
         float[] b = leastSquares(x, yPrime);
         result[0] = b[0];
         result[1] = b[1];
-        result[2] = basic.mean(z);
-        result[3] = basic.mean(w);
-        result[4] = basic.mean(v);
+        result[2] = Basic.mean(z);
+        result[3] = Basic.mean(w);
+        result[4] = Basic.mean(v);
         return result;
     }
     /**
@@ -174,7 +173,7 @@ public class Regression {
      * @param u
      * @return
      */
-    public float[] multipleRegression(float[] x, float[] y, float[] z, float[] w, float[] v, float[] u) {
+    public static float[] multipleRegression(float[] x, float[] y, float[] z, float[] w, float[] v, float[] u) {
         float[] result = new float[6];
         float[] yPrime = new float[y.length];
         for (int i = 0; i < y.length; i++) {
@@ -183,10 +182,10 @@ public class Regression {
         float[] b = leastSquares(x, yPrime);
         result[0] = b[0];
         result[1] = b[1];
-        result[2] = basic.mean(z);
-        result[3] = basic.mean(w);
-        result[4] = basic.mean(v);
-        result[5] = basic.mean(u);
+        result[2] = Basic.mean(z);
+        result[3] = Basic.mean(w);
+        result[4] = Basic.mean(v);
+        result[5] = Basic.mean(u);
         return result;
     }
     /**
@@ -200,7 +199,7 @@ public class Regression {
      * @param t
      * @return
      */
-    public float[] multipleRegression(float[] x, float[] y, float[] z, float[] w, float[] v, float[] u, float[] t) {
+    public static float[] multipleRegression(float[] x, float[] y, float[] z, float[] w, float[] v, float[] u, float[] t) {
         float[] result = new float[7];
         float[] yPrime = new float[y.length];
         for (int i = 0; i < y.length; i++) {
@@ -209,11 +208,11 @@ public class Regression {
         float[] b = leastSquares(x, yPrime);
         result[0] = b[0];
         result[1] = b[1];
-        result[2] = basic.mean(z);
-        result[3] = basic.mean(w);
-        result[4] = basic.mean(v);
-        result[5] = basic.mean(u);
-        result[6] = basic.mean(t);
+        result[2] = Basic.mean(z);
+        result[3] = Basic.mean(w);
+        result[4] = Basic.mean(v);
+        result[5] = Basic.mean(u);
+        result[6] = Basic.mean(t);
         return result;
     }
     /**
@@ -228,7 +227,7 @@ public class Regression {
      * @param s
      * @return
      */
-    public float[] multipleRegression(float[] x, float[] y, float[] z, float[] w, float[] v, float[] u, float[] t, float[] s) {
+    public static float[] multipleRegression(float[] x, float[] y, float[] z, float[] w, float[] v, float[] u, float[] t, float[] s) {
         float[] result = new float[8];
         float[] yPrime = new float[y.length];
         for (int i = 0; i < y.length; i++) {
@@ -237,12 +236,12 @@ public class Regression {
         float[] b = leastSquares(x, yPrime);
         result[0] = b[0];
         result[1] = b[1];
-        result[2] = basic.mean(z);
-        result[3] = basic.mean(w);
-        result[4] = basic.mean(v);
-        result[5] = basic.mean(u);
-        result[6] = basic.mean(t);
-        result[7] = basic.mean(s);
+        result[2] = Basic.mean(z);
+        result[3] = Basic.mean(w);
+        result[4] = Basic.mean(v);
+        result[5] = Basic.mean(u);
+        result[6] = Basic.mean(t);
+        result[7] = Basic.mean(s);
         return result;
     }
 
@@ -252,7 +251,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] exponentialRegression(float[] x, float[] y) {
+    public static float[] exponentialRegression(float[] x, float[] y) {
         float[] result = new float[2];
         float[] yPrime = new float[y.length];
         for (int i = 0; i < y.length; i++) {
@@ -269,7 +268,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] logarithmicRegression(float[] x, float[] y) {
+    public static float[] logarithmicRegression(float[] x, float[] y) {
         float[] result = new float[2];
         float[] yPrime = new float[y.length];
         for (int i = 0; i < y.length; i++) {
@@ -286,7 +285,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] powerRegression(float[] x, float[] y) {
+    public static float[] powerRegression(float[] x, float[] y) {
         float[] result = new float[2];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -305,7 +304,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] quadraticRegression(float[] x, float[] y) {
+    public static float[] quadraticRegression(float[] x, float[] y) {
         float[] result = new float[3];
         float[] xSquared = new float[x.length];
         float[] xCubed = new float[x.length];
@@ -341,7 +340,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] cubicRegression(float[] x, float[] y) {
+    public static float[] cubicRegression(float[] x, float[] y) {
         float[] result = new float[4];
         float[] xSquared = new float[x.length];
         float[] xCubed = new float[x.length];
@@ -378,7 +377,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] quarticRegression(float[] x, float[] y) {
+    public static float[] quarticRegression(float[] x, float[] y) {
         float[] result = new float[5];
         float[] xSquared = new float[x.length];
         float[] xCubed = new float[x.length];
@@ -417,7 +416,7 @@ public class Regression {
      * @param degree
      * @return
      */
-    public float[] polynomialRegression(float[] x, float[] y, int degree) {
+    public static float[] polynomialRegression(float[] x, float[] y, int degree) {
         float[] result = new float[degree + 1];
         float[] xSquared = new float[x.length];
         float[] xCubed = new float[x.length];
@@ -453,7 +452,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] sinusoidalRegression(float[] x, float[] y) {
+    public static float[] sinusoidalRegression(float[] x, float[] y) {
         float[] result = new float[3];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -473,7 +472,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] gaussianRegression(float[] x, float[] y) {
+    public static float[] gaussianRegression(float[] x, float[] y) {
         float[] result = new float[3];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -493,7 +492,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] logisticRegression(float[] x, float[] y) {
+    public static float[] logisticRegression(float[] x, float[] y) {
         float[] result = new float[3];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -513,7 +512,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] exponentialGrowthRegression(float[] x, float[] y) {
+    public static float[] exponentialGrowthRegression(float[] x, float[] y) {
         float[] result = new float[2];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -532,7 +531,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] exponentialDecayRegression(float[] x, float[] y) {
+    public static float[] exponentialDecayRegression(float[] x, float[] y) {
         float[] result = new float[2];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -551,7 +550,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] powerLawRegression(float[] x, float[] y) {
+    public static float[] powerLawRegression(float[] x, float[] y) {
         float[] result = new float[2];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -570,7 +569,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] sinusoidalDecayRegression(float[] x, float[] y) {
+    public static float[] sinusoidalDecayRegression(float[] x, float[] y) {
         float[] result = new float[3];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -590,7 +589,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] gaussianDecayRegression(float[] x, float[] y) {
+    public static float[] gaussianDecayRegression(float[] x, float[] y) {
         float[] result = new float[3];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -610,7 +609,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] logisticGrowthRegression(float[] x, float[] y) {
+    public static float[] logisticGrowthRegression(float[] x, float[] y) {
         float[] result = new float[3];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -630,7 +629,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] logisticDecayRegression(float[] x, float[] y) {
+    public static float[] logisticDecayRegression(float[] x, float[] y) {
         float[] result = new float[3];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -650,7 +649,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] exponentialGrowthDecayRegression(float[] x, float[] y) {
+    public static float[] exponentialGrowthDecayRegression(float[] x, float[] y) {
         float[] result = new float[2];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -669,7 +668,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] exponentialDecayGrowthRegression(float[] x, float[] y) {
+    public static float[] exponentialDecayGrowthRegression(float[] x, float[] y) {
         float[] result = new float[2];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -688,7 +687,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] powerLawGrowthDecayRegression(float[] x, float[] y) {
+    public static float[] powerLawGrowthDecayRegression(float[] x, float[] y) {
         float[] result = new float[2];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -707,7 +706,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] powerLawDecayGrowthRegression(float[] x, float[] y) {
+    public static float[] powerLawDecayGrowthRegression(float[] x, float[] y) {
         float[] result = new float[2];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];
@@ -726,7 +725,7 @@ public class Regression {
      * @param y
      * @return
      */
-    public float[] sinusoidalDecayGrowthRegression(float[] x, float[] y) {
+    public static float[] sinusoidalDecayGrowthRegression(float[] x, float[] y) {
         float[] result = new float[3];
         float[] xPrime = new float[x.length];
         float[] yPrime = new float[y.length];

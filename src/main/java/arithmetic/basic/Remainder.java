@@ -10,7 +10,7 @@ public class Remainder {
      * @param num2 second number
      * @return remainder of two numbers
      */
-    public float remainder(float num1, float num2) {
+    public static float remainder(float num1, float num2) {
         try {
             return num1 % num2;
         } catch (ArithmeticException e) {

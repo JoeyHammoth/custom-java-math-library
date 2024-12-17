@@ -101,9 +101,6 @@ public class Main {
 }
 ```
 
-## Documentation
-Detailed documentation and API references are available [here](https://github.com/JoeyHammoth/custom-java-math-library/wiki).
-
 ## Roadmap
 - Add support for symbolic computation
 - Expand support for advanced statistics and probability

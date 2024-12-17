@@ -84,7 +84,22 @@ The **Java Math Library** is a versatile and powerful library designed to simpli
 Here is a basic example demonstrating the usage of various modules in the library:
 
 ```java
+package org.example;
 
+import arithmetic.advanced.*;
+import arithmetic.basic.*;
+//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+public class Main {
+    public static void main(String[] args) {
+        System.out.println(Addition.add(12, 12));
+        System.out.println(Subtraction.subtract(12, 12));
+        System.out.println(Multiplication.multiply(12, 12));
+        System.out.println(Division.divide(12, 12));
+        System.out.println(Remainder.remainder(12, 12));
+        System.out.println(Exponent.exponent(1, 2));
+    }
+}
 ```
 
 ## Documentation

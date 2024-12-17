@@ -101,7 +101,7 @@ public class Main {
 }
 ```
 ## Documentation
-For documentation regarding this library of packages, the javadoc can be accessed [here](https://github.com/JoeyHammoth/custom-java-math-library/tree/main/Javadoc/index.html).
+For documentation regarding this library of packages, the javadoc can be accessed [here](https://joeyhammoth.github.io/custom-java-math-library/).
 ## Roadmap
 - Add support for symbolic computation
 - Expand support for advanced statistics and probability

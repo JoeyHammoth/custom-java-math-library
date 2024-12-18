@@ -61,7 +61,7 @@ The **Java Math Library** is a versatile and powerful library designed to simpli
 ## Getting Started
 
 ### Prerequisites
-- **Java 8 or later**
+- **Java 11 or later**
 
 ### Installation
 1. Clone the repository:
@@ -102,6 +102,101 @@ public class Main {
 ```
 ## Documentation
 For documentation regarding this library of packages, the javadoc can be accessed [here](https://joeyhammoth.github.io/custom-java-math-library/).
+## Project Structure 
+```
+custom-java-math-library
+├── LICENSE
+├── README.md
+├── pom.xml
+└── src
+    └── main
+        └── java
+            ├── arithmetic
+            │   ├── advanced
+            │   │   ├── Exponent.java
+            │   │   ├── Factorial.java
+            │   │   ├── Logarithm.java
+            │   │   └── package-info.java
+            │   ├── basic
+            │   │   ├── Addition.java
+            │   │   ├── Division.java
+            │   │   ├── Multiplication.java
+            │   │   ├── Remainder.java
+            │   │   ├── Subtraction.java
+            │   │   └── package-info.java
+            │   └── package-info.java
+            ├── calculus
+            │   ├── Derivative.java
+            │   └── package-info.java
+            ├── combinatorics
+            │   ├── Basic.java
+            │   └── package-info.java
+            ├── finance
+            │   ├── Basic.java
+            │   └── package-info.java
+            ├── function
+            │   ├── Element.java
+            │   ├── Expression.java
+            │   ├── Function.java
+            │   ├── Operation.java
+            │   ├── Type.java
+            │   ├── advanced
+            │   │   ├── Cos.java
+            │   │   ├── Exp.java
+            │   │   ├── Log.java
+            │   │   ├── Sin.java
+            │   │   └── package-info.java
+            │   ├── basic
+            │   │   ├── Constant.java
+            │   │   ├── Variable.java
+            │   │   └── package-info.java
+            │   └── package-info.java
+            ├── geometry
+            │   ├── Coordinate.java
+            │   ├── Distance.java
+            │   ├── Polygon.java
+            │   ├── Shape.java
+            │   ├── ThreeDimCoordinate.java
+            │   ├── ThreeDimShape.java
+            │   ├── formula
+            │   │   ├── ThreeDimensional.java
+            │   │   ├── TwoDimensional.java
+            │   │   └── package-info.java
+            │   ├── package-info.java
+            │   └── trig
+            │       ├── Advanced.java
+            │       ├── Basic.java
+            │       └── package-info.java
+            ├── linalg
+            │   ├── Matrix.java
+            │   ├── advanced
+            │   │   ├── Attributes.java
+            │   │   ├── Diagonal.java
+            │   │   ├── Eigen.java
+            │   │   ├── Identity.java
+            │   │   ├── Inverse.java
+            │   │   ├── Simplification.java
+            │   │   ├── Transpose.java
+            │   │   └── package-info.java
+            │   ├── basic
+            │   │   ├── Addition.java
+            │   │   ├── Division.java
+            │   │   ├── Multiplication.java
+            │   │   ├── Operation.java
+            │   │   ├── Subtraction.java
+            │   │   └── package-info.java
+            │   └── package-info.java
+            ├── seqser
+            │   ├── Arithmetic.java
+            │   ├── Geometric.java
+            │   ├── Harmonic.java
+            │   └── package-info.java
+            └── statistics
+                ├── Basic.java
+                ├── Evaluation.java
+                ├── Regression.java
+                └── package-info.java                           
+```
 ## Roadmap
 - Add support for symbolic computation
 - Expand support for advanced statistics and probability
